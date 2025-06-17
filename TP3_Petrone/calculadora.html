@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Mi Portfolio</h1>
+    <nav>
+      <a href="index.html" class="activo">Inicio</a>
+      <a href="sobre.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="../index.html">LinkTree</a>
+      </nav>
+  </header>
+  <header><h1>Calculadora</h1></header>
+  <main>
+    <div class="calculadora">
+      <input type="text" id="pantalla" readonly>
+      <div class="botones">
+        <button onclick="agregar('7')">7</button>
+        <button onclick="agregar('8')">8</button>
+        <button onclick="agregar('9')">9</button>
+        <button onclick="agregar('+')">+</button>
+        <button onclick="agregar('4')">4</button>
+        <button onclick="agregar('5')">5</button>
+        <button onclick="agregar('6')">6</button>
+        <button onclick="agregar('-')">-</button>
+        <button onclick="agregar('1')">1</button>
+        <button onclick="agregar('2')">2</button>
+        <button onclick="agregar('3')">3</button>
+        <button onclick="agregar('*')">*</button>
+        <button onclick="agregar('0')">0</button>
+        <button onclick="agregar('.')">.</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="agregar('/')">/</button>
+        <button onclick="borrar()">C</button>
+        <button onclick="raiz()">√</button>
+      </div>
+    </div>
+  </main>
+  <script>
+  const pantalla = document.getElementById('pantalla');
+  function agregar(valor) { pantalla.value += valor; }
+  function borrar() { pantalla.value = ''; }
+  function calcular() { pantalla.value = eval(pantalla.value); }
+  function raiz() { pantalla.value = Math.sqrt(parseFloat(pantalla.value)).toFixed(2); }
+  </script>
+  <footer>
+    <p>© 2025 Milagros Petrone</p>
+    <div class="redes">
+      <a href="https://github.com">GitHub</a> |
+      <a href="https://linkedin.com">LinkedIn</a>
+    </div>
+    </footer>
+</body>
+</html>

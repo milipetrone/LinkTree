@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+}
+
+.logo-principal {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgb(248, 189, 235);
+    object-fit: cover;
+    margin-top: 150px;
+    margin-bottom: 5px;
+}
+
+nav {
+    text-align: center;
+    margin-top: 50px;
+}
+
+nav li {
+    margin-bottom: 20px;
+}
+
+nav a {
+    padding: 10px 200px;
+    background-color: rgb(248, 189, 235);
+    text-decoration: none;
+    color: rgb(219, 2, 190);
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    background-image: url(Imagenes/fondo.jpg);
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+h1 {
+    font-family: "Gorditas", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+h2 {
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+footer{
+    background-color:  rgb(230, 178, 233);
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;  
+}
+
+.negrita {
+    font-weight: bold; 
+}
+
+footer p {
+    margin: 3px 0; 
+}
+
+.contenido {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    height: 100vh;
+}
+
+.redes-sociales{
+    list-style: none;
+    display: flex; 
+    gap: 15px; 
+    padding: 0;  
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+
+.redes-sociales li {
+    display: flex;
+    align-items: center;
+}
+
+.redes-sociales li a img {
+    width: 50px; 
+    height: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.redes-sociales li a img:hover {
+        transform: scale(1.2);
+} 
+
+
+@media (min-width: 1024px) {
+    .contenido {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        width: 100%;
+        text-align: center;
+    }
+
+    .redes-sociales {
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+    }
+
+}

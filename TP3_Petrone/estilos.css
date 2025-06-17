@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fffafc;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #fcdff0;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #eba7cc;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #e85ca4;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b03a87;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover,
+nav a.activo {
+  color: #e85ca4;
+  border-bottom: 2px solid #e85ca4;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.bienvenida {
+  text-align: center;
+  max-width: 700px;
+}
+
+.proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.proyecto {
+  background-color: #fbe4f4;
+  border: 2px solid #f6c4e2;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.proyecto a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #d03f8c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.proyecto a:hover {
+  background-color: #b32e73;
+}
+
+.habilidades ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+  color: #6e1e49;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #d88fb3;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+form button {
+  background-color: #e85ca4;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #c73b85;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #fcdff0;
+  border-top: 4px solid #eba7cc;
+  text-align: center;
+}
+
+footer .redes a {
+  color: #b03a87;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer .redes a:hover {
+  color: #e85ca4;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.calculadora input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.botones button {
+  width: 60px;
+  height: 40px;
+  font-size: 1rem;
+  background-color: #e1b3d1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botones button:hover {
+  background-color: #c78bb3;
+}
+
+#lista {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+#lista li {
+  background: #fcdff0;
+  padding: 0.5rem;
+  border: 1px solid #eba7cc;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+#lista li:hover {
+  background: #f6c4e2;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .proyectos {
+    padding: 0 1rem;
+  }
+
+  .calculadora {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.galeria img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 4px solid #f6c4e2;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}

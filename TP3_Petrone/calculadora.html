@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+  <link rel="icon" href="imagenes/corazón.png"; type="ícono">
+  <link rel="stylesheet" href="estilos.css">
+  
+  <!-- Fuente h1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Galada&family=Gorditas:wght@400;700&family=Lilita+One&family=Oleo+Script+Swash+Caps:wght@400;700&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+  <header>
+    <h1>Mi Portfolio</h1>
+    <nav>
+      <a href="index.html" class="activo">Inicio</a>
+      <a href="sobre.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="../index.html">LinkTree</a>
+      </nav>
+  </header>
+  
+  <header><h1>Calculadora</h1></header>
+
+  <main>
+    <div class="calculadora">
+      <!-- readonly: el usuario no puede escribir directamente en el campo, solo se actualiza con los botones de la calculadora --> 
+      <input type="text" id="pantalla" readonly>
+      <div class="botones">
+        <button onclick="agregar('7')">7</button>
+        <button onclick="agregar('8')">8</button>
+        <button onclick="agregar('9')">9</button>
+        <button onclick="agregar('+')">+</button>
+        <button onclick="agregar('4')">4</button>
+        <button onclick="agregar('5')">5</button>
+        <button onclick="agregar('6')">6</button>
+        <button onclick="agregar('-')">-</button>
+        <button onclick="agregar('1')">1</button>
+        <button onclick="agregar('2')">2</button>
+        <button onclick="agregar('3')">3</button>
+        <button onclick="agregar('*')">*</button>
+        <button onclick="agregar('0')">0</button>
+        <button onclick="agregar('.')">.</button>
+        <button onclick="agregar('/')">/</button>
+        <button onclick="porcentaje()">%</button>
+        <button onclick="borrar()">C</button>
+        <button onclick="borrarUno()">DEL</button>
+        <button onclick="calcular()">=</button>
+        <button onclick="raiz()">√</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="calculadora.js"></script>
+
+  <div class="volver-inicio">
+    <a href="index.html" class="btn-volver">← Volver al inicio</a>
+  </div>
+
+  <footer>
+    <p class="negrita">Derechos de autor</p>
+    <p> Diseñado y desarrollado: © 2025 Milagros Petrone</p>   
+    <p class="negrita"> Mis redes son: </p> 
+    <div class="redes">
+      <a href="https://www.instagram.com/milipetrone?igsh=OTM2MXRxaXViMGgz&utm_source=qr" target="_blank"><img src="imagenes/instagram.png" alt="Logo Instagram"></a>
+      <a href="https://www.facebook.com/share/163M9FSsoX/?mibextid=wwXIfr" target="_blank"><img src="imagenes/facebook.png" alt="Logo Facebook"></a>
+      <a href="mailto: petronemilagros@gmail.com"><img src="imagenes/correo.png" alt="Logo correo"></a>
+    </div>   
+  </footer>
+
+</body>
+</html>

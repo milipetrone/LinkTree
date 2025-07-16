@@ -1,0 +1,985 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fffafc;
+  color: #171717;
+  line-height: 1.6;
+  height: 100%;
+}
+
+/* CONTENEDOR GENERAL */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #fcdff0;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid #eba7cc;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #e85ca4;
+  margin-bottom: 0.5rem;
+}
+
+h1{
+    font-family: "Gorditas", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(14, 14, 14);
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b03a87;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.activo {
+  color: #e85ca4;
+  border-bottom: 2px solid #e85ca4;
+}
+
+.imagen-principal {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #eba7cc;
+  box-shadow: 0 0 10px rgba(214, 47, 173, 0.3);
+  transition: transform 0.3s ease;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.imagen-principal:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.bienvenida {
+  text-align: center;
+  max-width: 700px;
+}
+
+.bienvenida p {
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: rgb(14, 14, 14);
+  line-height: 1.6;
+}
+
+section p {
+  font-size: 18px; 
+}
+
+/* BOTON VER PROYECTO */
+.ver-proyecto {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background-color: #ff0084;
+  color: white;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ver-proyecto:hover,
+.ver-proyecto:focus {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(243, 4, 155, 0.4);
+}
+
+/* SECCION PROYECTOS */
+.proyectos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.proyecto {
+  background-color: #fbe4f4;
+  border: 2px solid #f6c4e2;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.proyecto a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #d03f8c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.proyecto a:hover {
+  background-color: #b32e73;
+}
+
+/* RESPONSIVE DESIGN INICIO */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .imagen-principal {
+    width: 140px;
+    height: 140px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bienvenida p,
+  section p {
+    font-size: 16px;
+  }
+
+  .ver-proyecto {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .proyectos {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagen-principal {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .proyectos {
+    padding: 1rem;
+  }
+
+  .proyecto {
+    padding: 0.8rem;
+  }
+
+  .ver-proyecto {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+
+/* CONTENEDOR GENERAL DE SOBRE MÍ */
+.sobre-mi {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* SECCIÓN HABILIDADES */
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #fde6f7, #f8c3e4);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #060606;
+}
+
+.habilidades h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0a0a0a;
+}
+
+.habilidades ul {
+  padding-left: 1.5rem;
+  color: #6e1e49;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* SECCIÓN EXPERIENCIA */
+.experiencia-laboral {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #fde6f7, #f8c3e4);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #060606;
+}
+
+.experiencia-laboral h2 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0a0a0a;
+}
+
+.experiencia-laboral p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 10px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.experiencia-laboral p::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #d62fad;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* SECCIÓN CV */
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #fde6f7, #f8c3e4);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #060606;
+  text-align: center;
+}
+
+.cv h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #010101;
+}
+
+.boton-descarga {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #b03a87;
+  color: white;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.boton-descarga:hover,
+.boton-descarga:focus {
+  background-color: #d62fad;
+  transform: scale(1.05);
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE DESIGN SOBRE MI */
+@media (max-width: 768px) {
+  .sobre-mi {
+    padding: 1rem;
+  }
+
+  .habilidades,
+  .experiencia-laboral,
+  .cv {
+    padding: 15px;
+  }
+
+  .habilidades ul,
+  .experiencia-laboral p {
+    font-size: 14px;
+  }
+
+  .cv h3 {
+    font-size: 18px;
+  }
+
+  .boton-descarga {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-mi {
+    gap: 1.5rem;
+  }
+
+  .boton-descarga {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/* CONTENEDOR DEL FORMULARIO */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* FORMULARIO PERSONALIZADO */
+form {
+  max-width: 500px;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(135deg, #f1a4e4, #fdedf9);
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d62fad;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 16px;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+  resize: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+form textarea {
+  resize: vertical; /* El usuario puede estirarlo hacia abajo */
+}
+
+/* BOTÓN ENVIAR */
+form button[type="submit"] {
+  padding: 12px;
+  background-color: #e667b7;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: #d62fad;
+  transform: scale(1.05);
+}
+
+/* BOTÓN VOLVER AL INICIO */
+.btn-volver {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #b03a87;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-volver:hover,
+.btn-volver:focus {
+  background-color: #d62fad;
+  transform: scale(1.05);
+}
+
+.volver-inicio {
+  text-align: center;
+  margin: 40px 0;
+}
+
+/* RESPONSIVE DESIGN CONTACTO */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 15px;
+  }
+
+  form button[type="submit"] {
+    font-size: 16px;
+  }
+
+  .btn-volver {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto {
+    padding: 1rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .btn-volver {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  background-color: #fcdff0;
+  border-top: 4px solid #eba7cc;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* TEXTO DESTACADO */
+.negrita {
+  font-weight: bold;
+}
+
+footer p {
+  margin: 3px 0;
+  font-size: 15px;
+  color: #171717;
+  line-height: 1.0;
+}
+
+/* REDES SOCIALES */
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.redes a:hover img {
+  transform: scale(1.2);
+}
+
+/* RESPONSIVE DESIGN FOOTER */
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .redes img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .redes {
+    gap: 8px;
+  }
+
+  .redes img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* CONTENEDOR DE LA CALCULADORA */
+.calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 300px;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, #fde6f7, #f8c3e4);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* CAMPO DE ENTRADA (PANTALLA) */
+.calculadora input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.4rem;
+  text-align: right;
+  border-radius: 8px;
+  border: 2px solid #d62fad;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* CONTENEDOR DE BOTONES */
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* BOTONES INDIVIDUALES */
+.botones button {
+  width: 60px;
+  height: 40px;
+  font-size: 1rem;
+  background-color: #e1b3d1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* EFECTO HOVER EN BOTONES */
+.botones button:hover {
+  background-color: #c78bb3;
+  transform: scale(1.05);
+}
+
+
+/* RESPONSIVE DESIGN CALCULADORA */
+@media (max-width: 480px) {
+  .calculadora {
+    width: 95%;
+    padding: 0.8rem;
+  }
+
+  .calculadora input {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .botones button {
+    width: 48px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+}
+
+
+/* CONTENEDOR DE GALERÍA */
+.galeria-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* IMÁGENES EN MINIATURA */
+.galeria img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 4px solid #e85ca4;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* LIGHTBOX CON EFECTO DE DESVANECIMIENTO */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+/* CLASE ACTIVADA PARA MOSTRAR EL LIGHTBOX */
+.lightbox.visible {
+  display: flex;
+  opacity: 1;
+}
+
+/* IMAGEN AMPLIADA CON ZOOM SUAVE */
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 4px solid white;
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: transform 0.4s ease;
+}
+
+.lightbox.visible img {
+  transform: scale(1);
+}
+
+/* BOTÓN DE CIERRE CON ANIMACIÓN */
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cerrar:hover {
+  transform: rotate(90deg);
+}
+
+
+/* RESPONSIVE DESIGN GALERIA */
+@media (max-width: 768px) {
+  .galeria-contenedor {
+    padding: 1.5rem 1rem;
+  }
+
+  .galeria {
+    gap: 0.8rem;
+  }
+
+  .galeria img {
+    width: 300px;
+    height: 200px;
+    max-width: 350px;
+    border-radius: 10px;
+  }
+
+  .cerrar {
+    font-size: 1.8rem;
+    top: 15px;
+    right: 20px;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-contenedor {
+    padding: 1rem;
+  }
+
+  .galeria {
+    gap: 0.6rem;
+  }
+
+  .galeria img {
+    width: 250px;
+    height: 250px;
+    max-width: 280px;
+    border-radius: 8px;
+  }
+
+  .cerrar {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 15px;
+  }
+
+  .lightbox img {
+    max-width: 95%;
+    max-height: 70%;
+  }
+}
+
+
+/* CONTENEDOR PRINCIPAL TAREAS */
+.tareas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #fde6f7, #f8c3e4);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* CAMPO DE TEXTO */
+.tareas input[type="text"] {
+  width: 90%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #d62fad;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* BOTÓN AGREGAR */
+.tareas button {
+  padding: 10px 18px;
+  background-color: #b03a87;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* HOVER EN BOTÓN AGREGAR */
+.tareas button:hover {
+  background-color: #d62fad;
+  transform: scale(1.05);
+}
+
+/* TEXTO INFORMATIVO */
+.tareas p {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* LISTA DE TAREAS */
+#lista {
+  padding: 0;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* CADA TAREA COMO ITEM VISUAL */
+#lista li {
+  background: #fcdff0;
+  padding: 0.5rem;
+  border: 2px solid #eba7cc;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+  display: inline-block; 
+  word-break: break-word; /* Por si escriben algo muy largo sin espacios */
+}
+
+
+/* EFECTO HOVER EN TAREA */
+#lista li:hover {
+  background: #f6c4e2;
+}
+
+/* TAREA COMPLETADA */
+.tarea-completada {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.7;
+}
+
+/* BOTÓN BORRAR */
+.btn-borrar {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #f080b4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-borrar:hover {
+  background-color: #d62fad;
+}
+
+/* ANIMACIÓN AL AGREGAR TAREA */
+.tarea-agregada {
+  animation: aparecer 0.5s ease forwards;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* RESPONSIVE DESIGN LISTA DE TAREAS */
+@media (max-width: 768px) {
+  .tareas {
+    padding: 20px;
+  }
+
+  .tareas input[type="text"] {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .tareas button {
+    font-size: 15px;
+    padding: 9px 16px;
+  }
+
+  .tareas p {
+    font-size: 17px;
+  }
+
+  #lista {
+    gap: 0.4rem;
+  }
+
+  #lista li {
+    font-size: 16px;
+    padding: 0.4rem 0.6rem;
+    border-width: 1.5px;
+    text-align: center;
+  }
+
+  .btn-borrar {
+    font-size: 13px;
+    padding: 4px 8px;
+    margin-left: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tareas {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .tareas input[type="text"],
+  .tareas button {
+    width: 100%;
+  }
+
+  .tareas p {
+    font-size: 16px;
+  }
+
+  #lista {
+    gap: 0.3rem;
+  }
+
+  #lista li {
+    font-size: 15px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    width: fit-content;
+    max-width: 95%;
+  }
+
+  .btn-borrar {
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+  }
+}
+
+  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <link rel="icon" href="imagenes/corazón.png"; type="ícono">
+  <link rel="stylesheet" href="estilos.css">
+  
+  <!-- Fuente h1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Galada&family=Gorditas:wght@400;700&family=Lilita+One&family=Oleo+Script+Swash+Caps:wght@400;700&family=Prata&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+  <header>
+        <h1>Mi Portfolio</h1>
+        <nav>
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="sobre.html">Sobre mí</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="../index.html">LinkTree</a>
+        </nav>
+  </header>
+
+  <header><h1>Lista de Tareas</h1></header>
+
+  <main class="tareas">
+    <input type="text" id="nueva-tarea" placeholder="Escribí una tarea...">
+    <button onclick="agregarTarea()">Agregar</button>
+    <p>Sí completaste la tarea, tachala haciendo click en ella!</p>
+    <ul id="lista"></ul>
+
+  </main>
+  
+  <script src="tareas.js"></script>
+  
+  <div class="volver-inicio">
+    <a href="index.html" class="btn-volver">← Volver al inicio</a>
+  </div>
+  
+  <footer>
+    <p class="negrita">Derechos de autor</p>
+    <p> Diseñado y desarrollado: © 2025 Milagros Petrone</p>   
+    <p class="negrita"> Mis redes son: </p> 
+    <div class="redes">
+      <a href="https://www.instagram.com/milipetrone?igsh=OTM2MXRxaXViMGgz&utm_source=qr" target="_blank"><img src="imagenes/instagram.png" alt="Logo Instagram"></a>
+      <a href="https://www.facebook.com/share/163M9FSsoX/?mibextid=wwXIfr" target="_blank"><img src="imagenes/facebook.png" alt="Logo Facebook"></a>
+      <a href="mailto: petronemilagros@gmail.com"><img src="imagenes/correo.png" alt="Logo correo"></a>
+    </div>   
+  </footer>
+</body>
+</html>
